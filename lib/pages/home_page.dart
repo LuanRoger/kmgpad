@@ -7,12 +7,11 @@ import 'package:kmgpad/pages/widgets/pane_body/settings_pane_body.dart';
 import 'package:kmgpad/providers/providers.dart';
 import 'package:kmgpad/shared/widgets/navigation_view_themed.dart';
 
-class HomePage extends HookConsumerWidget {
+class HomePage extends HookWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final controllers = ref.watch(controllerManagerProvider);
+  Widget build(BuildContext context) {
     final selectedPaneState = useState(0);
 
     return NavigationViewThemed(
